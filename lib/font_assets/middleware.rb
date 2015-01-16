@@ -6,8 +6,8 @@ module FontAssets
 
     def initialize(app, origin, options={})
       @app = app
-      @origin = origin
-      @options = options
+      @origin = FontAssets::Config.origin
+      @options = FontAssets::Config.options
       @mime_types = FontAssets::MimeTypes.new(Rack::Mime::MIME_TYPES)
     end
 
